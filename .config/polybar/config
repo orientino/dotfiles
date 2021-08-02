@@ -33,7 +33,7 @@ font-1 = FontAwesome5Free:style=Solid:size=8;2
 ;font-4 = FontAwesome5Brands:style=Regular:size=10;2
 
 modules-left = i3 
-modules-right = cpu memory temperature pulseaudio wlan battery date
+modules-right = temperature backlight pulseaudio wlan battery date
 ;modules-center = date
 
 scroll-up = "#i3.prev"
@@ -71,9 +71,9 @@ label-urgent-padding = 2
 [module/cpu]
 type = internal/cpu
 interval = 5
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
-label = %percentage:2%%
+label = %percentage%%
 format-padding = 1
 
 
@@ -83,6 +83,14 @@ interval = 5
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 label = %percentage_used%%
+format-padding = 1
+
+
+[module/backlight]
+type = internal/backlight
+card = intel_backlight
+format =  <label>
+label = %percentage%%
 format-padding = 1
 
 
@@ -107,8 +115,8 @@ ramp-signal-foreground = ${colors.foreground}
 type = internal/date
 interval = 1
 
-date-alt = %A, %d %B %Y
-time = %H:%M
+date-alt = %d %B %Y
+time = %A  -  %H:%M
 
 ;format-prefix = " "
 ;format-prefix-foreground = ${colors.foreground}
@@ -122,7 +130,7 @@ battery = BAT0
 adapter = ADP1
 full-at = 90
 
-format-full-prefix = " "
+format-full = |   <label-full>   |
 
 format-charging = |   <label-charging>   |
 format-charging-foreground = ${colors.green} 
@@ -167,6 +175,7 @@ format-padding = 1
 
 
 [module/pulseaudio]
+click-right = pavucontrol &
 type = internal/pulseaudio
 
 ; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false

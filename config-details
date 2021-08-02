@@ -1,4 +1,4 @@
-Enable the touchpad ----------------------------------------
+Enable the touchpa click ------------------------------------
 sudo mkdir -p /etc/X11/xorg.conf.d && sudo tee <<'EOF' /etc/X11/xorg.conf.d/90-touchpad.conf 1> /dev/null
 Section "InputClass"
         Identifier "touchpad"
@@ -42,8 +42,9 @@ sudo apt install flameshot
 sudo apt install redshift
 
 # install font
-https://github.com/FortAwesome/Font-Awesome/releases
 Download Source code
+    https://github.com/FortAwesome/Font-Awesome/releases
+
 mkdir ~/.fonts
 mv webfonts/*ttf ~/.fonts
 
