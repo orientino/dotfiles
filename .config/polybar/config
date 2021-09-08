@@ -9,7 +9,7 @@ red = #bd2c40
 
 [neo]
 yellow = #fff700
-blue = #00ccff
+blue = #88ccff
 pink = #ff00ea
 green = #20fc03
 orange = #f57f00
@@ -27,7 +27,7 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #000000
 
-padding-left = 6
+padding-left = 4
 padding-right = 0
 
 module-margin-left = 2
@@ -55,7 +55,7 @@ index-sort = true
 ; focused = Active workspace on focused monitor
 label-focused = %index%
 label-focused-background = ${colors.background}
-label-focused-underline = ${colors.foreground}
+;label-focused-underline = ${colors.foreground}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
@@ -131,7 +131,7 @@ time = %A  -  %H:%M
 format-padding = 3
 format-background = ${neo.blue}
 format-foreground = ${colors.background}
-label = %date% %time%
+label = %date% %time%  
 
 
 [module/battery]
