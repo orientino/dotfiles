@@ -58,3 +58,6 @@ update-grub, update-initramfs
 Keyboard K3 config auto connect after sleep/hibernate -------
 https://gist.github.com/andrebrait/961cefe730f4a2c41f57911e6195e444
 https://askubuntu.com/questions/17504/how-can-i-have-a-bluetooth-keyboard-auto-connect-at-startup
+
+https://github.com/rjekker/i3-battery-popup
+
