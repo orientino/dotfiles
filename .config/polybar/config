@@ -7,6 +7,13 @@ green = #83ff30
 orange = #ffb536
 red = #bd2c40
 
+[neo]
+yellow = #fff700
+blue = #00ccff
+pink = #ff00ea
+green = #20fc03
+orange = #f57f00
+
 
 [bar/topbar]
 enable-ipc = true
@@ -21,7 +28,7 @@ line-size = 3
 line-color = #000000
 
 padding-left = 6
-padding-right = 8
+padding-right = 0
 
 module-margin-left = 2
 module-margin-right = 2
@@ -92,6 +99,7 @@ card = intel_backlight
 format =  <label>
 label = %percentage%%
 format-padding = 1
+format-foreground = ${colors.foreground}
 
 
 [module/wlan]
@@ -120,7 +128,9 @@ time = %A  -  %H:%M
 
 ;format-prefix = " "
 ;format-prefix-foreground = ${colors.foreground}
-format-padding = 0
+format-padding = 3
+format-background = ${neo.blue}
+format-foreground = ${colors.background}
 label = %date% %time%
 
 
@@ -130,15 +140,15 @@ battery = BAT0
 adapter = ADP1
 full-at = 90
 
-format-full = |   <label-full>   |
+format-full = |   <label-full>
 
-format-charging = |   <label-charging>   |
-format-charging-foreground = ${colors.green} 
+format-charging = |   <label-charging>
+format-charging-foreground = ${colors.foreground} 
 format-charging-padding = 0
 
-format-discharging = |   <label-discharging>   |
+format-discharging = |   <label-discharging>
 ;format-discharging = <ramp-capacity> %{F${colors.orange} <label-discharging> %{F-}
-format-discharging-foreground = ${colors.orange}
+format-discharging-foreground = ${colors.foreground}
 format-discharging-padding = 0
 
 ramp-capacity-0 =  
@@ -185,15 +195,17 @@ interval = 5
 
 ; Available tags:
 ;   <bar-volume>
+;format-volume = <ramp-volume> <bar-volume>
 format-volume = <ramp-volume> <label-volume>
 format-volume-foreground = ${colors.foreground}
 
 label-muted = 
 label-muted-foreground = ${colors.foreground}
 
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
+;ramp-volume-0 = 
+;ramp-volume-1 = 
+;ramp-volume-2 = 
+ramp-volume-0 = 
 
 ; ------------------------ END OF MODULES --------------------------------------------------
 

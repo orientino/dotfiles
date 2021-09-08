@@ -135,15 +135,13 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-#set $bg-color 	          #212121
 set $bg-color 	         #000000
 set $text-color          #f3f4f5
-#set $inactive-bg-color   #212121
 set $inactive-bg-color   #000000
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
-#set $border-focused	     #c0e218
-set $border-focused	     #ffcc29
+#set $border-focused	     #ffcc29
+set $border-focused	     #00ccff
 
 # bar
 #bar {
@@ -190,13 +188,13 @@ bindsym $mod+Shift+Escape exec --no-startup-id systemctl hibernate
 bindsym Print exec flameshot gui
 
 # load application on start
-exec_always feh --bg-scale ~/Pictures/wallpaper.jpg
+exec redshift
+exec compton
+exec feh --bg-scale ~/Pictures/wallpaper.jpg
+exec --no-startup-id i3-battery-popup -n -L 20
 exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec_always compton
-exec_always --no-startup-id i3-battery-popup -n -L 20
-exec_always redshift
 
 # remove title bar from windows
-for_window [class="^.*"] border pixel 4
-default_border normal
-default_floating_border normal
+for_window [class="^.*"] border pixel 2
+#default_border normal
+#default_floating_border normal
