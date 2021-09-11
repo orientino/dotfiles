@@ -14,7 +14,6 @@ pink = #ff00ea
 green = #20fc03
 orange = #f57f00
 
-
 [bar/topbar]
 enable-ipc = true
 width = 100%
@@ -35,16 +34,23 @@ module-margin-right = 2
 
 font-0 = Ubuntu:pixelsize=10;3
 font-1 = FontAwesome5Free:style=Solid:size=8;2
-;font-2 = FontAwesome:style=Regular:size=10;2
+font-2 = FontAwesome:style=Solid:size=10;2
 ;font-3 = FontAwesome5Free:style=Regular:size=10;2
 ;font-4 = FontAwesome5Brands:style=Regular:size=10;2
 
 modules-left = i3 
-modules-right = temperature backlight pulseaudio wlan battery date
+modules-right = temperature backlight pulseaudio bluetooth wlan battery date
 ;modules-center = date
 
 scroll-up = "#i3.prev"
 scroll-down = "#i3.next"
+
+
+;================================================================
+;================================================================
+;                           MODULES
+;================================================================
+;================================================================
 
 
 [module/i3]
@@ -75,6 +81,11 @@ label-urgent-background = #5f5f5f
 label-urgent-padding = 2
 
 
+;================================================================
+;                           CPU
+;================================================================
+
+
 [module/cpu]
 type = internal/cpu
 interval = 5
@@ -82,6 +93,11 @@ format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 label = %percentage%%
 format-padding = 1
+
+
+;================================================================
+;                           MEMORY
+;================================================================
 
 
 [module/memory]
@@ -93,13 +109,51 @@ label = %percentage_used%%
 format-padding = 1
 
 
+;================================================================
+;                           BACKLIGHT
+;================================================================
+
+
 [module/backlight]
 type = internal/backlight
 card = intel_backlight
-format =  <label>
+format = <ramp>
+;format = <ramp> <label>
 label = %percentage%%
 format-padding = 1
 format-foreground = ${colors.foreground}
+
+ramp-0 = 
+ramp-0-foreground = ${colors.inactive}
+ramp-1 = 
+ramp-1-foreground = ${colors.foreground}
+ramp-2 = 
+ramp-2-foreground = ${colors.orange}
+ramp-3 = 
+ramp-3-foreground = ${colors.red}
+
+
+;================================================================
+;                           BLUETOOTH
+;================================================================
+
+
+[module/bluetooth]
+type = custom/script
+interval = 5
+exec = ~/.config/polybar/scripts/bluetooth.sh
+;click-left = exec blueberry
+click-right = exec ~/.config/polybar/scripts/toggle_bluetooth.sh
+
+format-padding = 1
+;format-prefix = 
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}
+
+
+;================================================================
+;                           WLAN
+;================================================================
 
 
 [module/wlan]
@@ -110,13 +164,19 @@ interval = 5.0
 format-connected = <ramp-signal>
 ;format-connected = <ramp-signal> <label-connected>
 ;label-connected = %essid%
-format-connected-padding = 1
+format-connected-padding = 0
 
-format-disconnected = 
-format-disconnected-padding = 1
+format-disconnected = 
+format-disconnected-foreground = ${colors.inactive}
+format-disconnected-padding = 0
 
 ramp-signal-0 = 
 ramp-signal-foreground = ${colors.foreground}
+
+
+;================================================================
+;                           DATE
+;================================================================
 
 
 [module/date]
@@ -128,10 +188,15 @@ time = %A  -  %H:%M
 
 ;format-prefix = " "
 ;format-prefix-foreground = ${colors.foreground}
-format-padding = 3
+format-padding = 2
 format-background = ${neo.blue}
 format-foreground = ${colors.background}
 label = %date% %time%  
+
+
+;================================================================
+;                           BATTERY
+;================================================================
 
 
 [module/battery]
@@ -140,13 +205,14 @@ battery = BAT0
 adapter = ADP1
 full-at = 90
 
-format-full = |   <label-full>
+format-full = <label-full>
 
-format-charging = |   <label-charging>
-format-charging-foreground = ${colors.foreground} 
+format-charging = <label-charging>
+format-charging-foreground = ${colors.green} 
 format-charging-padding = 0
 
-format-discharging = |   <label-discharging>
+format-discharging = <label-discharging>
+;format-discharging = |   <label-discharging>
 ;format-discharging = <ramp-capacity> %{F${colors.orange} <label-discharging> %{F-}
 format-discharging-foreground = ${colors.foreground}
 format-discharging-padding = 0
@@ -161,6 +227,12 @@ ramp-capacity-3 = 
 ramp-capacity-3-foreground = ${colors.green}
 ramp-capacity-4 = 
 ramp-capacity-4-foreground = ${colors.green}
+
+
+;================================================================
+;                           TEMPERATURE
+;================================================================
+
 
 [module/temperature]
 type = internal/temperature
@@ -184,6 +256,11 @@ ramp-foreground = ${colors.foreground}
 format-padding = 1
 
 
+;================================================================
+;                           AUDIO
+;================================================================
+
+
 [module/pulseaudio]
 click-right = pavucontrol &
 type = internal/pulseaudio
@@ -196,16 +273,18 @@ interval = 5
 ; Available tags:
 ;   <bar-volume>
 ;format-volume = <ramp-volume> <bar-volume>
-format-volume = <ramp-volume> <label-volume>
+;format-volume = <ramp-volume> <label-volume>
+format-volume = <ramp-volume> 
 format-volume-foreground = ${colors.foreground}
 
 label-muted = 
 label-muted-foreground = ${colors.foreground}
 
-;ramp-volume-0 = 
-;ramp-volume-1 = 
-;ramp-volume-2 = 
-ramp-volume-0 = 
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-3 = 
+;ramp-volume-0 = 
 
 ; ------------------------ END OF MODULES --------------------------------------------------
 
