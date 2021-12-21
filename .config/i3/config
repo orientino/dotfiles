@@ -158,11 +158,11 @@ set $border-focused	     #88ccff
 #}
 
 # class                 border              backgr.            text                 indicator child_border
-client.focused          $border-focused     $border-focused    $text-color          $border-focused
-client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $border-focused
-client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color $border-focused
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $border-focused
-client.background       $border-focused     $border-focused    $text-color          $border-focused
+client.focused          $border-focused     $border-focused    $text-color          $inactive-bg-color
+client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $inactive-bg-color
+client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color $inactive-bg-color
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $inactive-bg-color
+client.background       $border-focused     $border-focused    $text-color          $inactive-bg-color
 
 # audio settings
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -183,7 +183,8 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+Mod1+v exec ~/.vim-anywhere/bin/run
 
 # bind hibernate
-bindsym $mod+Shift+Escape exec --no-startup-id systemctl hibernate
+bindsym $mod+Shift+Escape exec --no-startup-id systemctl hibernate; exec i3lock
+bindsym $mod+Shift+s exec --no-startup-id systemctl suspend; exec i3lock
 
 # bind screenshot
 bindsym Print exec flameshot gui

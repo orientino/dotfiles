@@ -39,8 +39,7 @@ font-2 = FontAwesome:style=Solid:size=10;2
 ;font-4 = FontAwesome5Brands:style=Regular:size=10;2
 
 modules-left = i3 
-modules-right = temperature backlight pulseaudio bluetooth wlan battery date
-;modules-center = date
+modules-right = backlight pulseaudio bluetooth wlan battery date
 
 scroll-up = "#i3.prev"
 scroll-down = "#i3.next"
@@ -88,7 +87,7 @@ label-urgent-padding = 2
 
 [module/cpu]
 type = internal/cpu
-interval = 5
+interval = 1
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 label = %percentage%%
@@ -102,7 +101,7 @@ format-padding = 1
 
 [module/memory]
 type = internal/memory
-interval = 5
+interval = 1
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 label = %percentage_used%%
@@ -140,13 +139,12 @@ ramp-3-foreground = ${colors.red}
 
 [module/bluetooth]
 type = custom/script
-interval = 5
+interval = 1
 exec = ~/.config/polybar/scripts/bluetooth.sh
 ;click-left = exec blueberry
 click-right = exec ~/.config/polybar/scripts/toggle_bluetooth.sh
 
 format-padding = 1
-;format-prefix = 
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
 
@@ -159,7 +157,7 @@ format-foreground = ${colors.foreground}
 [module/wlan]
 type = internal/network
 interface = wlp0s20f3
-interval = 5.0
+interval = 1
 
 format-connected = <ramp-signal>
 ;format-connected = <ramp-signal> <label-connected>
@@ -186,8 +184,6 @@ interval = 1
 date-alt = %d %B %Y
 time = %A  -  %H:%M
 
-;format-prefix = " "
-;format-prefix-foreground = ${colors.foreground}
 format-padding = 2
 format-background = ${neo.blue}
 format-foreground = ${colors.background}
@@ -212,7 +208,6 @@ format-charging-foreground = ${colors.green}
 format-charging-padding = 0
 
 format-discharging = <label-discharging>
-;format-discharging = |   <label-discharging>
 ;format-discharging = <ramp-capacity> %{F${colors.orange} <label-discharging> %{F-}
 format-discharging-foreground = ${colors.foreground}
 format-discharging-padding = 0
@@ -238,7 +233,7 @@ ramp-capacity-4-foreground = ${colors.green}
 type = internal/temperature
 thermal-zone = 0
 warn-temperature = 80
-interval = 5
+interval = 1
 
 format = <ramp> <label>
 format-warn = <ramp> <label-warn>
@@ -268,11 +263,10 @@ type = internal/pulseaudio
 ; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
 use-ui-max = false
 
-interval = 5
+interval = 1
 
 ; Available tags:
 ;   <bar-volume>
-;format-volume = <ramp-volume> <bar-volume>
 ;format-volume = <ramp-volume> <label-volume>
 format-volume = <ramp-volume> 
 format-volume-foreground = ${colors.foreground}
@@ -284,7 +278,6 @@ ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
 ramp-volume-3 = 
-;ramp-volume-0 = 
 
 ; ------------------------ END OF MODULES --------------------------------------------------
 
