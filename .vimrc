@@ -6,7 +6,7 @@ syntax on
 :set shiftwidth=4
 :set autoindent
 :set smartindent
-:set relativenumber
+":set relativenumber
 
 " keybinding
 :imap jj <Esc>
