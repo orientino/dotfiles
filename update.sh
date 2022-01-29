@@ -7,3 +7,4 @@ cp ~/.config/dunst/ ./.config/ -r
 cp ~/.config/redshift.conf .
 cp ~/.bash_aliases .
 cp ~/.vimrc .
+cp ~/.zshrc .
