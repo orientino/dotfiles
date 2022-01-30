@@ -8,3 +8,5 @@ cp ~/.config/redshift.conf .
 cp ~/.bash_aliases .
 cp ~/.vimrc .
 cp ~/.zshrc .
+cp ~/.tmux.conf .
+cp ~/.p10k.zsh .
