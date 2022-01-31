@@ -10,3 +10,5 @@ cp ~/.vimrc .
 cp ~/.zshrc .
 cp ~/.tmux.conf .
 cp ~/.p10k.zsh .
+cp ~/.fonts . -r
+cp ~/.fehbg .
