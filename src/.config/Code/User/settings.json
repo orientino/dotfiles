@@ -8,10 +8,11 @@
 		"badge.foreground": "#88ccff",
 		"breadcrumb.activeSelectionForeground": "#88ccff",
 		"breadcrumb.focusForeground": "#88ccff",
-		"editor.foreground": "#88ccff",
+		"editor.foreground": "#ffffff",
 		"editor.selectionHighlightBorder": "#88ccff8c",
 		"editorGroup.dropBackground": "#88ccff4b",
 		"editorLineNumber.activeForeground": "#88ccff",
+		"editorLineNumber.foreground": "#dddddd",
 		"editorLink.activeForeground": "#88ccff",
 		"list.dropBackground": "#88ccff4b",
 		"list.highlightForeground": "#88ccff",
@@ -23,10 +24,11 @@
 		"editor.lineHighlightBorder": "#2277aa",
 		"editor.selectionBackground": "#2277aa",
 		"selection.background": "#2277aa",
+		"focusBorder": "#000000",
     },
 
     "breadcrumbs.enabled": false,
-
+	"editor.minimap.enabled": false,
     "window.menuBarVisibility": "toggle",
     "window.zoomLevel": 1,
 
@@ -35,5 +37,5 @@
             "before": ["j", "j"],
             "after": ["<Esc>"]
         }
-    ],
+	],
 }
