@@ -82,6 +82,7 @@ alias bt-up="sudo hciconfig hci0 up"
 alias bt-down="sudo hciconfig hci0 down"
 
 alias p3="python3"
+alias thesis="cd ~/uni/thesis"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

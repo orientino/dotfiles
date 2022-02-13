@@ -1,0 +1,39 @@
+{
+    "workbench.colorTheme": "Nicer High Contrast",
+    "workbench.colorCustomizations" : {
+        "terminal.foreground" : "#dddddd",
+		"activityBar.activeBackground": "#88ccff",
+		"activityBar.activeBorder": "#88ccff",
+		"activityBarBadge.foreground": "#88ccff",
+		"badge.foreground": "#88ccff",
+		"breadcrumb.activeSelectionForeground": "#88ccff",
+		"breadcrumb.focusForeground": "#88ccff",
+		"editor.foreground": "#88ccff",
+		"editor.selectionHighlightBorder": "#88ccff8c",
+		"editorGroup.dropBackground": "#88ccff4b",
+		"editorLineNumber.activeForeground": "#88ccff",
+		"editorLink.activeForeground": "#88ccff",
+		"list.dropBackground": "#88ccff4b",
+		"list.highlightForeground": "#88ccff",
+		"panelTitle.activeForeground": "#88ccff",
+		"tab.activeForeground": "#88ccff",
+		"tab.unfocusedActiveForeground": "#88ccff8c",
+		"editor.findMatchBackground": "#2277aa",
+		"editor.findMatchHighlightBackground": "#2277aa",
+		"editor.lineHighlightBorder": "#2277aa",
+		"editor.selectionBackground": "#2277aa",
+		"selection.background": "#2277aa",
+    },
+
+    "breadcrumbs.enabled": false,
+
+    "window.menuBarVisibility": "toggle",
+    "window.zoomLevel": 1,
+
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        }
+    ],
+}
