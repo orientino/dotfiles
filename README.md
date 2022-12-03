@@ -64,3 +64,13 @@ https://gist.github.com/andrebrait/961cefe730f4a2c41f57911e6195e444
 https://askubuntu.com/questions/17504/how-can-i-have-a-bluetooth-keyboard-auto-connect-at-startup
 https://github.com/rjekker/i3-battery-popup
 
+## ZSH vim-mode
+```
+cd ~/.oh-my-zsh/custom/plugins
+git clone https://github.com/softmoth/zsh-vim-mode.git
+source "$ZSH/custom/plugins/zsh-vim-mode/zsh-vim-mode.plugin.zsh"
+```
+Add this to `.zshrc`
+```
+bindkey -M viins 'jj' vi-cmd-mode
+```

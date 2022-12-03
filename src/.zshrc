@@ -74,6 +74,8 @@ alias open='xdg-open'
 alias google='google-chrome'
 alias temperature='sensors'
 alias wifi='nmtui'
+alias wifi-rofi='bash ~/.config/rofi-wifi-menu/rofi-wifi-menu.sh'
+alias wifi-gnome='gnome-control-center wifi'
 alias audio="pavucontrol"
 alias battery='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
 alias battery-k3="cat /sys/class/power_supply/hid-dc\:2c\:26\:08\:1f\:73-battery/capacity"
@@ -81,8 +83,12 @@ alias bt="hciconfig"
 alias bt-up="sudo hciconfig hci0 up"
 alias bt-down="sudo hciconfig hci0 down"
 
+alias xclip="xclip -selection c"
 alias p3="python3"
+alias natpn="cd ~/uni/thesis/natpn-improve"
 alias thesis="cd ~/uni/thesis"
+
+bindkey -M viins 'jj' vi-cmd-mode
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -101,3 +107,9 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+#
+#
+#
+conda activate natpn-improve
+
+export PATH="/usr/local/texlive/2022/bin/x86_64-linux:$PATH"

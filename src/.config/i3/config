@@ -192,7 +192,7 @@ bindsym Print exec flameshot gui
 # load application on start
 exec redshift
 exec compton
-exec feh --bg-scale ~/Pictures/wallpaper.jpg
+exec feh --bg-scale ~/Pictures/wallpaper.png
 exec --no-startup-id i3-battery-popup -n -L 20
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
