@@ -39,6 +39,7 @@
     "window.menuBarVisibility": "toggle",
     "window.zoomLevel": 1,
 
+    // Vim
     "vim.statusBarColorControl": false,
     "vim.enableNeovim": true,
     "vim.useSystemClipboard": true,
@@ -54,6 +55,22 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "jupyter.debugJustMyCode": false,
     "breadcrumbs.enabled": false,
-    "python.formatting.provider": "black",
     "notebook.lineNumbers": "on",
+
+    // Python
+    // "python."defaultInterpreterPath": "/home/dot/miniconda3/bin/python",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+    },
+    "isort.args": [
+        "--profile",
+        "black"
+    ],
+    "black-formatter.args": [
+        "--line-length=80  "
+    ],
 }

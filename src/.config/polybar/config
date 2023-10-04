@@ -182,8 +182,8 @@ ramp-signal-foreground = ${colors.foreground}
 type = internal/date
 interval = 1
 
-date-alt = %d %B %Y
-time = %A  -  %H:%M
+;date-alt = %d %B %Y
+time = %a  |  %d %b  |  %H:%M
 
 format-padding = 2
 format-background = ${neo.blue}

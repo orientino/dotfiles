@@ -85,8 +85,9 @@ alias bt-down="sudo hciconfig hci0 down"
 
 alias xclip="xclip -selection c"
 alias p3="python3"
-alias natpn="cd ~/uni/thesis/natpn-improve"
-alias thesis="cd ~/uni/thesis"
+alias todo="vim ~/todo"
+alias phd="cd ~/phd"
+alias mamba="micromamba"
 
 bindkey -M viins 'jj' vi-cmd-mode
 
@@ -107,9 +108,22 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-#
-#
-#
-conda activate natpn-improve
 
-export PATH="/usr/local/texlive/2022/bin/x86_64-linux:$PATH"
+# export PATH="/usr/local/texlive/2022/bin/x86_64-linux:$PATH"
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# >>> mamba initialize >>>
+# !! Contents within this block are managed by 'mamba init' !!
+export MAMBA_EXE='/home/dot/.local/bin/micromamba';
+export MAMBA_ROOT_PREFIX='/home/dot/micromamba';
+__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__mamba_setup"
+else
+    alias micromamba="$MAMBA_EXE"  # Fallback on help from mamba activate
+fi
+unset __mamba_setup
+# <<< mamba initialize <<<
+micromamba activate base
+
