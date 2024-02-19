@@ -1,7 +1,8 @@
-## Dotfiles for XPS15 9500 & Macbook Pro M2
-## XPS15 9500
-Enable the touchpad click 
-```
+# Dotfiles for XPS15 9500 & Macbook Pro M2
+## Setup XPS15 9500
+Run the following
+```bash
+# Enable the touchpad click
 sudo mkdir -p /etc/X11/xorg.conf.d && sudo tee <<'EOF' /etc/X11/xorg.conf.d/90-touchpad.conf 1> /dev/null
 Section "InputClass"
         Identifier "touchpad"
@@ -10,10 +11,8 @@ Section "InputClass"
         Option "Tapping" "on"
 EndSection
 EOF
-```
 
- Reverse the touchpad controller direction 
-```
+# Reverse the touchpad controller direction 
 sudo vim /usr/share/X11/xorg.conf.d/40-libinput.conf
 Section "InputClass"
         Identifier "libinput touchpad catchall"
@@ -22,17 +21,8 @@ Section "InputClass"
         Driver "libinput"
         Option "NaturalScrolling" "True"
 EndSection
-```
 
-Set intel backlight button.
-Install [light](https://github.com/haikarainen/light.git), look for .deb and install it
-```
-sudo dpkg -i light.deb
-sudo usermod -a -G video username
-```
-
-Install additional packages
-```
+# Install packages
 sudo apt install feh            # background images
 sudo apt install i3blocks       # status bar
 sudo apt install polybar        # status bar
@@ -47,10 +37,24 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux source ~/.tmux.conf
 ```
 
-Install [Font Awesome](https://github.com/FortAwesome/Font-Awesome/releases)
+Install [light](https://github.com/haikarainen/light.git) for the intel backlight button, look for .deb
+```
+sudo dpkg -i light.deb
+sudo usermod -a -G video username
+```
+Install [font awesome](https://github.com/FortAwesome/Font-Awesome/releases)
 ```
 mkdir ~/.fonts
 mv webfonts/*ttf ~/.fonts
+```
+Set ZSH in vim-mode
+```bash
+cd ~/.oh-my-zsh/custom/plugins
+git clone https://github.com/softmoth/zsh-vim-mode.git
+source "$ZSH/custom/plugins/zsh-vim-mode/zsh-vim-mode.plugin.zsh"
+
+# add this to `.zshrc`
+bindkey -M viins 'jj' vi-cmd-mode
 ```
 
 Activate hibernate on Ubuntu
@@ -64,15 +68,5 @@ Keyboard K3 config auto connect after sleep/hibernate
 [[2]](https://askubuntu.com/questions/17504/how-can-i-have-a-bluetooth-keyboard-auto-connect-at-startup)
 [[3]](https://github.com/rjekker/i3-battery-popup)
 
-ZSH vim-mode
-```bash
-cd ~/.oh-my-zsh/custom/plugins
-git clone https://github.com/softmoth/zsh-vim-mode.git
-source "$ZSH/custom/plugins/zsh-vim-mode/zsh-vim-mode.plugin.zsh"
-
-# add this to `.zshrc`
-bindkey -M viins 'jj' vi-cmd-mode
-```
-
-## Macbook Pro M2
+## Setup Macbook Pro M2
 Install yabai, skhd, karabiner
