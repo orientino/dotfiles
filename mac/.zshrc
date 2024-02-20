@@ -38,16 +38,22 @@ fi
 unset __mamba_setup
 # <<< mamba initialize <<<
 
+# Colors
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
 # Alias
-alias ll="ls -l"
+alias ls="ls -G"
+alias ll="ls -l -G"
 alias mamba=micromamba
 alias p=python3
 alias studentid="echo 023244692A | pbcopy"
-
-mamba activate base
 
 # Vim
 bindkey -v
 bindkey -M viins 'jj' vi-cmd-mode
 bindkey '^R' history-incremental-pattern-search-backward
+
+# Envinronment
+mamba activate base
 
