@@ -1,0 +1,73 @@
+{
+    "workbench.colorTheme": "Nicer High Contrast",
+    "workbench.colorCustomizations": {
+        "terminal.foreground": "#dddddd",
+        "activityBar.activeBackground": "#88ccff",
+        "activityBar.activeBorder": "#88ccff",
+        "activityBarBadge.foreground": "#88ccff",
+        "badge.foreground": "#88ccff",
+        "breadcrumb.activeSelectionForeground": "#88ccff",
+        "breadcrumb.focusForeground": "#88ccff",
+        "editor.foreground": "#ffffff",
+        "editor.selectionHighlightBorder": "#88ccff8c",
+        "editorGroup.dropBackground": "#88ccff4b",
+        "editorLineNumber.activeForeground": "#88ccff",
+        "editorLineNumber.foreground": "#dddddd",
+        "editorLink.activeForeground": "#88ccff",
+        "list.dropBackground": "#88ccff4b",
+        "list.highlightForeground": "#88ccff",
+        "panelTitle.activeForeground": "#88ccff",
+        "tab.activeForeground": "#ffffff",
+        "tab.inactiveBackground": "#000000",
+        "tab.activeBackground": "#333333",
+        "tab.inactiveModifiedBorder": "#000000",
+        "tab.border": "#000000",
+        "focusBorder": "#333333",
+        "editorGroupHeader.tabsBackground": "#000000",
+        "editor.findMatchBackground": "#2277aa",
+        "editor.findMatchHighlightBackground": "#2277aa",
+        "editor.lineHighlightBorder": "#2277aa",
+        "editor.selectionBackground": "#2277aa",
+        "selection.background": "#2277aa",
+        "statusBar.background": "#000000",
+        "statusBar.noFolderBackground": "#000000",
+        "statusBar.debuggingBackground": "#000000",
+        "statusBar.foreground": "#dddddd",
+        "statusBar.debuggingForeground": "#dddddd"
+    },
+    "editor.minimap.enabled": false,
+    "editor.fontSize": 14,
+    "window.commandCenter": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "vscode-neovim.compositeKeys": {
+        "jj": {
+            "command": "vscode-neovim.escape",
+        },
+    },
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+
+    // Python
+    "python.defaultInterpreterPath": "/Users/chenxiang.zhang/micromamba/envs/test",
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit",
+        }
+    },
+    "jupyter.askForKernelRestart": false,
+    "jupyter.debugJustMyCode": false,
+    "notebook.lineNumbers": "on",
+    "notebook.formatOnSave.enabled": true,
+    "notebook.codeActionsOnSave": {
+      "notebook.source.fixAll": "explicit",
+      "notebook.source.organizeImports": "explicit"
+    },
+    "github.copilot.editor.enableAutoCompletions": true,
+    "workbench.activityBar.location": "top",
+    "breadcrumbs.enabled": false,
+}
