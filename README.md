@@ -80,3 +80,5 @@ fisher install IlanCosman/tide@v5
 # install nvim for vscode
 brew install neovim
 ```
+
+[Disable app shortcuts (e.g. CMD+H)](https://superuser.com/questions/1043596/mac-osx-remove-hide-window-keyboard-shortcut) 
