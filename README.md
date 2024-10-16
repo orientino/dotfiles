@@ -82,3 +82,4 @@ brew install neovim
 ```
 
 [Disable app shortcuts (e.g. CMD+H)](https://superuser.com/questions/1043596/mac-osx-remove-hide-window-keyboard-shortcut) 
+[Karpathy setup](https://x.com/karpathy/status/1762648404029759758?t=VTMtxTHPY_NB7flzNTaK8A&s=35)
