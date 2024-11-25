@@ -28,5 +28,5 @@ ctrl + shift - 4 : yabai -m window --space 4
 ctrl + shift - 5 : yabai -m window --space 5
 
 # reload
-ctrl + shift - r : yabai --restart-service; skhd --reload;
+ctrl + shift - r : yabai --restart-service; skhd --restart-service;
 
