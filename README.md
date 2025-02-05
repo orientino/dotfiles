@@ -83,3 +83,31 @@ brew install neovim
 
 [Disable app shortcuts (e.g. CMD+H)](https://superuser.com/questions/1043596/mac-osx-remove-hide-window-keyboard-shortcut) 
 [Karpathy setup](https://x.com/karpathy/status/1762648404029759758?t=VTMtxTHPY_NB7flzNTaK8A&s=35)
+
+## Setup SSH machine with module envs
+
+```
+# install fish
+wget https://github.com/fish-shell/fish-shell/releases/download/3.7.0/fish-3.7.0.tar.xz
+tar -xf fish-3.7.0.tar.xz
+cd fish-3.7.0
+mkdir build && cd build
+module spider cmake
+module load CMake/3.29.3-GCCcore-13.3.0
+module spider gcc
+module load zstd/1.5.6-GCCcore-13.3.0
+module spider binutils
+module load binutils/2.42-GCCcore-13.3.0
+cmake -DCMAKE_INSTALL_PREFIX=$HOME/.local ..
+make -j$(nproc)
+make install
+
+# install fisher/tide
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+fisher install IlanCosman/tide@v5
+
+# change colors
+set -U tide_pwd_color_anchors FF00AF
+set -U tide_pwd_color_dirs AF0087
+set -U tide_pwd_color_truncated_dirs AF0087
+```
