@@ -47,15 +47,6 @@ Install [font awesome](https://github.com/FortAwesome/Font-Awesome/releases)
 mkdir ~/.fonts
 mv webfonts/*ttf ~/.fonts
 ```
-Set ZSH in vim-mode
-```bash
-cd ~/.oh-my-zsh/custom/plugins
-git clone https://github.com/softmoth/zsh-vim-mode.git
-source "$ZSH/custom/plugins/zsh-vim-mode/zsh-vim-mode.plugin.zsh"
-
-# add this to `.zshrc`
-bindkey -M viins 'jj' vi-cmd-mode
-```
 
 Activate hibernate on Ubuntu
 - Get UUID
