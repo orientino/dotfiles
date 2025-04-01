@@ -29,10 +29,10 @@ yabai -m config                                 \
 # yabai -m rule --add app="^(Code)$" space=2
 
 # unmanaged windows
-yabai -m rule --add app="^(Finder|Calculator|Software Update|VLC|System Preferences|System Settings|zoom.us|Photo Booth|Archive Utility|Python|LibreOffice|App Store|Steam|Activity Monitor)$" manage=off
+yabai -m rule --add app="^(Finder|Calculator|Software Update|System Preferences|System Settings|zoom.us|Photo Booth|Archive Utility|App Store|Steam|Activity Monitor|WeChat|Microsoft Teams)$" manage=off
 
 # borders
-borders active_color=0xff88ccff inactive_color=0x00ffffff width=6.0 &
+borders active_color=0xff88ccff inactive_color=0x00ffffff width=6.0 
 
 echo "yabai configuration loaded.."
 

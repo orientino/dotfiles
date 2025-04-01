@@ -1,4 +1,5 @@
 {
+    "workbench.activityBar.location": "top",
     "workbench.colorTheme": "Nicer High Contrast",
     "workbench.colorCustomizations": {
         "terminal.foreground": "#dddddd",
@@ -59,16 +60,28 @@
             "source.organizeImports": "explicit",
         }
     },
+    "ruff.lint.ignore": ["F401"],
+    
+    // Jupyter notebook
     "jupyter.askForKernelRestart": false,
     "jupyter.debugJustMyCode": false,
+    "jupyter.interactiveWindow.creationMode": "perFile",
     "notebook.lineNumbers": "on",
     "notebook.formatOnSave.enabled": true,
     "notebook.codeActionsOnSave": {
       "notebook.source.fixAll": "explicit",
       "notebook.source.organizeImports": "explicit"
     },
+    
+    // Others
     "github.copilot.editor.enableAutoCompletions": true,
-    "workbench.activityBar.location": "top",
     "interactiveWindow.executeWithShiftEnter": true,
-    "jupyter.interactiveWindow.creationMode": "perFile",
+    "git.suggestSmartCommit": false,
+    "update.mode": "manual",
+    "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/nvim/bin/nvim",
+    
+    // tmp for vscode-nvim fix
+    "workbench.view.showQuietly": {
+        "workbench.panel.output": true
+    }
 }

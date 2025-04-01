@@ -20,6 +20,11 @@ if status is-interactive
     alias kw="ps aux|grep wandb|grep -v grep | awk '{print $2}'|xargs kill -9"
     alias to="vim ~/todo"
     alias ds="cd ~/satoss/courses/distributedsystems"
+    alias ..="cd .."
+    alias ...="cd ../.."
+    alias rsync="rsync -avzu"
+    alias sshf="ssh iris -tt 'bash --login -c fish'"
+    alias sshfm="ssh meluxina -tt 'bash --login -c fish'"
 
     # >>> mamba initialize >>>
     # !! Contents within this block are managed by 'mamba init' !!
@@ -27,6 +32,8 @@ if status is-interactive
     set -gx MAMBA_ROOT_PREFIX "/Users/chenxiang.zhang/micromamba"
     $MAMBA_EXE shell hook --shell fish --root-prefix $MAMBA_ROOT_PREFIX | source
     # <<< mamba initialize <<<
+
+    export PATH="/usr/local/nvim/bin:$PATH"
 
 end
 
