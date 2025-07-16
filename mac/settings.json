@@ -74,14 +74,9 @@
     },
     
     // Others
-    "github.copilot.editor.enableAutoCompletions": true,
     "interactiveWindow.executeWithShiftEnter": true,
+    "github.copilot.editor.enableAutoCompletions": true,
     "git.suggestSmartCommit": false,
+    "remote.downloadExtensionsLocally": true,
     "update.mode": "manual",
-    "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/nvim/bin/nvim",
-    
-    // tmp for vscode-nvim fix
-    "workbench.view.showQuietly": {
-        "workbench.panel.output": true
-    }
 }

@@ -23,8 +23,8 @@ if status is-interactive
     alias ..="cd .."
     alias ...="cd ../.."
     alias rsync="rsync -avzu"
-    alias sshf="ssh iris -tt 'bash --login -c fish'"
-    alias sshfm="ssh meluxina -tt 'bash --login -c fish'"
+    alias sshi="ssh iris -tt 'bash --login -c fish'"
+    alias sshm="ssh meluxina -tt 'bash --login -c fish'"
 
     # >>> mamba initialize >>>
     # !! Contents within this block are managed by 'mamba init' !!

@@ -10,8 +10,9 @@ ctrl + shift - j : yabai -m window --warp south
 ctrl + shift - k : yabai -m window --warp north
 ctrl + shift - l : yabai -m window --warp east
 
-# make window zoom to fullscreen 
+# make window fullscreen, float
 ctrl - f : yabai -m window --toggle zoom-fullscreen
+ctrl - g : yabai -m window --toggle float
 
 # move to another space
 ctrl - 1 : yabai -m space --focus 1

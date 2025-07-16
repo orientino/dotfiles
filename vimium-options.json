@@ -1,0 +1,23 @@
+{
+  "keyMappings": "# Insert your preferred key mappings here.\nunmap x",
+  "scrollStepSize": 100,
+  "settingsVersion": "2.2.1",
+  "exclusionRules": [
+    {
+      "passKeys": "",
+      "pattern": "https?://mail.google.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "http://localhost:8888/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https://docs.google.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "about:blank*"
+    }
+  ]
+}
